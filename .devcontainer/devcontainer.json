@@ -1,0 +1,12 @@
+{
+    "name": "Julia VSCode Dev Container",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "julia-app",
+    "workspaceFolder": "/app",
+    "settings": {},
+    "extensions": [
+        "julialang.language-julia"
+    ]
+}
