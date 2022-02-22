@@ -4,4 +4,10 @@ services:
     image: julia:1.7.1
     volumes:
       - .:/app:cached
+      - dot-julia:/root/.julia
+      # - /tmp/.X11-unix:/tmp/.X11-unix
     command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      # - DISPLAY=host.docker.internal:1.0
+volumes:
+  dot-julia: 
