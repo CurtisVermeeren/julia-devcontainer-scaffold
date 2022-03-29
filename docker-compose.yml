@@ -1,13 +1,15 @@
 version: '3.8'
 services: 
   julia-app:
-    image: julia:1.7.1
+    container_name: julia-devcontainer-scaffold
+    build: .
     volumes:
       - .:/app:cached
       - dot-julia:/root/.julia
       # - /tmp/.X11-unix:/tmp/.X11-unix
-    command: /bin/sh -c "while sleep 1000; do :; done"
-    environment:
+    # environment:
       # - DISPLAY=host.docker.internal:1.0
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    
 volumes:
-  dot-julia: 
+  dot-julia:
