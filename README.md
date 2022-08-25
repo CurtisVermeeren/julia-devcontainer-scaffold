@@ -1,4 +1,4 @@
-## julia-dev-environment
+# Julia-Devcontainer-Scaffold
 Files for a VSCode devcontainer using Julia
 
 Includes volume for saving installed Julia packages.
