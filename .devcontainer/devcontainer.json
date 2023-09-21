@@ -1,12 +1,29 @@
 {
     "name": "Julia VSCode Dev Container",
+    
     "dockerComposeFile": [
         "../docker-compose.yml"
     ],
+    
     "service": "julia-app",
+    
     "workspaceFolder": "/app",
-    "settings": {},
-    "extensions": [
-        "julialang.language-julia"
-    ]
+    
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				}
+            },
+            "extensions": [
+                "julialang.language-julia",
+                "codeium.codeium",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    }
 }
